@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanchal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6db85d333e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+      <div class="container">
+        <nav>
+            <!-- <img src="images/logo1.jpeg" class="logo"> -->
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- <i class="fa-solid fa-xmark"onclick="closemenu()"></i> -->
+            </ul>
+            <!-- <i class="fa-solid fa-bars"onclick="openmenu()"></i> -->
+        </nav>
+        <div class="header-text">
+            <p>A Web Developer Enthusiast</p>
+            <h1>Hi,I'm <span>Aanchal</span><br> Singh From Nepal</h1>
+
+        </div>
+      </div>
+    </div>
+    <!-- --------about------ -->
+    <div class="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/background image.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a highly motivated and technically skilled individual looking for an interesting technical internship opportunity to further develop my 
+                        abilities and contribute to a creative and dynamic company.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links  active-link" onclick="opentab('skills')">Skills</p>
+                            <!-- <p class="tab-links" onclick="opentab('education')">Education</p> -->
+                            </div>
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Technical Skills</span><br>Java, HTML, CSS, Python</li>
+                                    <li><span>Relevant Coursework</span><br>Data Structure, DBMS, OOPS, Computer Network, SQL</li>
+                                </ul>
+                            </div>
+                            <!-- new -->
+                            <div class="tab-titles">
+                                <p class="tab-links  active-link" onclick="opentab('education')">Education</p>
+                                <!-- <p class="tab-links" onclick="opentab('education')">Education</p> -->
+                                </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2024</span><br>B.Tech in Computer Science</li>
+                                    <li><span>2019</span><br>12th from Shikshadeep School,Biratnagar</li>
+                                    <li><span>2017</span><br>10th from Little Star School,Lahan</li>
+                                </ul>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="Projects">
+        <div class="container">
+          <h1 class="sub-title">My Projects</h1> 
+          <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Personal Portfolio</h2>
+                <p>A portfolio website is a website & unique way to 
+                    showcase my work and let others know about myself.
+                     It's like an evergreen platform for my educational details,
+                      projects & other information about me.I have done this website using HTML, CSS, JavaScript.</p>
+                     <!-- <a href="#">Learn more</a> -->
+            </div>
+             <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Tracking System for Pets</h2>
+                <p> A pet tracking system where we will be using GPS technology to monitor pets
+                     providing real-time location updates via a mobile app. It will ensure pet safety and 
+                    enable quick retrieval if lost, offering peace of mind to pet owners.</p>
+                    <!-- <a href="#">Learn more</a> -->
+            </div> 
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Alcohol Detector</h2>
+                <p> A prototype using Arduino board and is used to display whether alcohol 
+                    is detected or not using a sensor and an LCD display.Alcohol detector are often 
+                    devices that test breath to determine the amount of ethanol present in a person’s system. When a drunk person breaths close to an alcohol 
+                    sensor, the sensor detects the ethanol in his breath and outputs data dependent on the amount of alcohol in his breath.</p>
+                    <!-- <a href="#">Learn more</a> -->
+            </div>
+          </div> 
+        </div>
+    </div>
+     <!-- -------contact------ -->
+     <div class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+             <h1 class="sub-title">Contact Me</h1>
+             <p><i class="fa-solid fa-paper-plane"></i>aanchalsingh975@gmail.com</p>
+             <p><i class="fa-solid fa-square-phone"></i>7488898628</p>
+             <div class="social-icons">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/rajputaanchu66/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/aanchal-singh--/"><i class="fa-brands fa-linkedin"></i></a>
+               <a href=" https://github.com/aachalsingh66 "><i class="fa-brands fa-github"></i></a>
+
+             </div>
+             <a href="images/Aanchal Singh_20BTRCS156.pdf" download class="btn btn1">Download CV</a>
+                </div>
+                <div class="contain-right">
+                    <form> 
+                        <input type="text"name="Name"placeholder="Your Name"required>
+                        <input type="email"name="email"placeholder="Your Email"required>
+                        <textarea name="Message"rows="6"placeholder="Your Message"required></textarea>
+                        <button type="submit"class="btn btn1">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+           <p>Copyright @ Aanchal.Thankyou<i class="fa-solid fa-heart"></i></p> 
+        </div>
+    </div>
+
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links"); 
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="-200px"
+        }
+    </script>
+    
+</body>
+</html>
